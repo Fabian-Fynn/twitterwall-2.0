@@ -54,20 +54,20 @@ module.exports = function (app) {
       now.setMinutes(time.getMinutes())
 
       Object.keys(roomData).forEach(function (room) {
-        roomData[room].some(function (talk) {
-          var time = new Date(talk.start_time)
+        // roomData[room].some(function (talk) {
+        //   var time = new Date(talk.start_time)
 
-          var diff = time - now
+        //   var diff = time - now
 
-          if (diff < 0 || diff > forerun) return false
+        //   if (diff < 0 || diff > forerun) return false
 
-          talk.style = {
-            spacename: { color: roomColors[room] }
-          }
+        //   talk.style = {
+        //     spacename: { color: roomColors[room] }
+        //   }
 
-          nextTalks.push(talk)
-          return true
-        })
+        //   nextTalks.push(talk)
+        //   return true
+        // })
       })
       return nextTalks
     }

@@ -3,6 +3,7 @@
 /*jshint camelcase: false */
 
 var e = process.env
+console.log(e);
 
 module.exports = {
   title: e.TITLE || '.concat() 2018 Twitterwall',
