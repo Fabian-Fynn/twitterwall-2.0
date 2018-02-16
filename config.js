@@ -5,12 +5,12 @@
 var e = process.env
 
 module.exports = {
-  title: e.TITLE || '.concat() 2015 Twitterwall',
-  hashtag: e.HASHTAG || '#concat15',
+  title: e.TITLE || '.concat() 2018 Twitterwall',
+  hashtag: e.HASHTAG || '#concat18',
   port: e.PORT || 8000,
   twitter: {
     throttle: 1000,
-    tracks: (e.HASHTAGS || '#concat,#concat15,#concat2015').split(','),
+    tracks: (e.HASHTAGS || '#concat,#concat18,#concat2018,#valentinstag,#stau,#valentine,#valentinesday,#love').split(','),
     users: (e.USERS || 'conc_at').split(','),
     tweetHistory: true,
     auth: {
@@ -40,64 +40,77 @@ module.exports = {
     blockPossiblySensitive: true
   },
   sponsors: [{
-    image: 'https://conc.at/images/logos/zalando@2x.png',
-    name: 'Zalando Technology',
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/namics.jpg',
+    name: 'Namics',
     duration: 20000
   }, {
-    image: 'https://conc.at/images/logos/pusher@2x.png',
-    name: 'Pusher',
-    duration: 20000
-  }, {
-    image: 'https://conc.at/images/logos/braintree@2x.png',
-    name: 'Braintree Payments',
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/google.jpg',
+    name: 'Google',
     duration: 10000
   }, {
-    image: 'https://conc.at/images/logos/aws@2x.png',
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/aws.jpg',
     name: 'Amazon Web Services',
     duration: 10000
   }, {
-    image: 'https://conc.at/images/logos/travis@2x.png',
-    name: 'Travis CI',
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/mozilla.jpg',
+    name: 'Mozilla',
     duration: 10000
   }, {
-    image: 'https://conc.at/images/logos/hoodie@2x.png',
-    name: 'Hoodie',
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/automattic.jpg',
+    name: 'Automattic',
     duration: 10000
   }, {
-    image: 'https://conc.at/images/logos/mandrill@2x.png',
-    name: 'Mandrill',
-    duration: 10000
-  }, {
-    image: 'https://conc.at/images/logos/gg@2x.png',
-    name: 'gesagt.getan',
-    duration: 10000
-  }, {
-    image: 'https://conc.at/images/logos/siili@2x.png',
-    name: 'Siili',
-    duration: 10000
-  }, {
-    image: 'https://conc.at/images/logos/diamonddogs@2x.png',
-    name: 'the diamond:dogs|group',
-    duration: 10000
-  }, {
-    image: 'https://conc.at/images/logos/codeschool@2x.png',
-    name: 'codeschool',
-    duration: 10000
-  }, {
-    image: 'https://conc.at/images/logos/transloadit@2x.png',
-    name: 'Transloadit',
-    duration: 10000
-  }, {
-    image: 'https://conc.at/images/logos/techtrrrs@2x.png',
-    name: 'techtrrrs',
-    duration: 10000
-  }, {
-    image: 'https://conc.at/images/logos/cws@2x.jpg',
-    name: 'Coworking Salzburg',
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/pixelart.jpg',
+    name: 'Pixelart',
     duration: 10000
   }, {
     image: 'https://conc.at/images/logos/fh@2x.jpg',
     name: 'University of Applied Sciences Salzburg',
     duration: 10000
-  }]
+  }, {
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/poi.jpg',
+    name: 'Porsche Informatik',
+    duration: 10000
+  }, {
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/beenergised.jpg',
+    name: 'Be:ENERGISED',
+    duration: 10000
+  }, {
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/stickeryou.jpg',
+    name: 'StickerYou',
+    duration: 10000
+  }, {
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/dna.jpg',
+    name: 'Die Netzwerkarchitekten',
+    duration: 10000
+  }, {
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/jetbrains.jpg',
+    name: 'JetBrains',
+    duration: 10000
+  }, {
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/kat.jpg',
+    name: 'Karriere.at',
+    duration: 10000
+  }, {
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/elements.jpg',
+    name: 'elements',
+    duration: 10000
+  }, {
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/findologic.jpg',
+    name: 'Findologic',
+    duration: 5000
+  }, {
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/manner.jpg',
+    name: 'Manner',
+    duration: 5000
+  }, {
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/makava.jpg',
+    name: 'Makava',
+    duration: 5000
+  }, {
+    image: 'http://assets.fabianhoffmann.io/concat/sponsors/gesagtgetan.jpg',
+    name: 'gesagt.getan',
+    duration: 5000
+  }
+  ]
 }

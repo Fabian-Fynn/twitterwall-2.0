@@ -1,5 +1,6 @@
 'use strict'
 
+var e = process.env;
 var lib = require('./lib')
 
 /* eslint new-cap:0 */

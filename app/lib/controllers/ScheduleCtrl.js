@@ -17,23 +17,24 @@ module.exports = function (app) {
       return date.toISOString()
     }
 
+    console.log('request Schedule');
+
     $http.get('/schedule').then(function (res) {
       var roomData = {}
-      Object.keys(res.data).forEach(function (room) {
-        Object.keys(res.data[room]).forEach(function (date) {
-          if (date === today) {
-            roomData[room] = res.data[room][date]
-            if (!roomColors[room]) roomColors[room] = randomColor()
-          }
-        })
+      console.log('res :', res);
+
+      Object.keys(res.data).forEach(function (roomID) {
+        const room = res.data[roomID]
+
+        if (!roomColors[roomID]) roomColors[roomID] = randomColor()
       })
 
-      setCurrentTalk(roomData)
-      $interval(setCurrentTalk.bind(null, roomData), config.lanyrd.showNext)
+      setCurrentTalk(res.data)
+      $interval(setCurrentTalk.bind(null, res.data), config.lanyrd.showNext)
     })
 
     var currentIndex = 0
-    function setCurrentTalk (roomData) {
+    function setCurrentTalk(roomData) {
       var nextTalks = getNextTalks(roomData)
       if (nextTalks[currentIndex]) {
         $scope.nextUp = nextTalks[currentIndex]
@@ -45,7 +46,7 @@ module.exports = function (app) {
       currentIndex = 1
     }
 
-    function getNextTalks (roomData) {
+    function getNextTalks(roomData) {
       var nextTalks = []
       var time = new Date()
       var now = new Date(today)
@@ -61,7 +62,7 @@ module.exports = function (app) {
           if (diff < 0 || diff > forerun) return false
 
           talk.style = {
-            spacename: {color: roomColors[room]}
+            spacename: { color: roomColors[room] }
           }
 
           nextTalks.push(talk)

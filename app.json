@@ -4,39 +4,43 @@
   "repository": "https://github.com/conc-at/twitterwall",
   "logo": "https://rawgit.com/conc-at/twitterwall/master/app/images/concat.svg",
   "success_url": "/",
-  "keywords": ["twitterwall", "realtime", "conference"],
+  "keywords": [
+    "twitterwall",
+    "realtime",
+    "conference"
+  ],
   "env": {
     "TITLE": {
       "description": "The title of your twitterwall"
-     },
+    },
     "HASHTAG": {
       "description": "The main hashtag you want to encourage people to tweet with"
-     },
+    },
     "HASHTAGS": {
       "description": "A comma seperated list of hashtags you want to display"
-     },
+    },
     "USERS": {
       "description": "A comma seperated list of users whose tweets you want to display",
       "value": ""
     },
     "ACCESS_TOKEN": {
-      "description": "Go to https://apps.twitter.com/ an get yourself some tokens"
-     },
+      "description": ""
+    },
     "ACCESS_TOKEN_SECRET": {
-      "description": "See ACCESS_TOKEN"
-     },
+      "description": ""
+    },
     "CONSUMER_KEY": {
-      "description": "See ACCESS_TOKEN"
-     },
+      "description": ""
+    },
     "CONSUMER_SECRET": {
-      "description": "See ACCESS_TOKEN"
-     },
+      "description": ""
+    },
     "LANYRD_YEAR": {
       "description": "Go to your lanyrd event page and enter the year that is in the URL"
-     },
+    },
     "LANYRD_ID": {
       "description": "Go to your lanyrd event page and enter the event name/id that is in the URL"
-     },
+    },
     "ADMIN_USER": {
       "description": "A username for the admin API used by https://github.com/conc-at/twitterwall-cli",
       "value": "admin",
@@ -45,7 +49,6 @@
     "ADMIN_PASSWORD": {
       "description": "A password for the admin API used by https://github.com/conc-at/twitterwall-cli",
       "required": false
-
     },
     "BLOCKED_USERS": {
       "description": "A comma seperated list of users you want to block from the wall",
